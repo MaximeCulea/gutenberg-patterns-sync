@@ -1,0 +1,21 @@
+{
+    "name": "maximeculea/gutenberg-patterns-sync",
+    "description": "WP-CLI commands to export/import block patterns (wp_block).",
+    "type": "wordpress-muplugin",
+    "license":"GPL-3.0+",
+    "authors":[
+        {
+            "name":"Maxime Culea",
+            "email":"contact@maximeculea.fr",
+            "homepage":"https://maximeculea.fr"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "MC\\WP_CLI_Commands\\": "classes/"
+        }
+    }
+}
