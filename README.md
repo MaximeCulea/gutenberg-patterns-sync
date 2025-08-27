@@ -1,7 +1,9 @@
 # Gutenberg Patterns Sync (Export/Import)
 
 Dev‑oriented plugin to sync patterns from local with other environments (staging, production) by exporting and importing block patterns (wp_block) as JSON via WP‑CLI.
+
 By default, stores these JSON files in the current theme's patterns/blocks-sync directory. It checks existing patterns to handle create/updates instead of hard‑deleting each time, which helps keep references in the DB and code stable.
+
 Also, for each pattern, it keeps synced (or not) status, block categories.
 
 ## Requirements
@@ -11,24 +13,26 @@ Also, for each pattern, it keeps synced (or not) status, block categories.
 
 ## Installation
 
-This package is a regular WordPress plugin. You can install and activate it like any other plugin. You can install by Composer, it is designed to be installed as a MU plugin (developer‑oriented).
+### As a regular plugin
 
-### As a regular plugin (manual)
+This package is a regular WordPress plugin. You can install and activate it like any other plugin.
+
 - Copy this folder into `wp-content/plugins/gutenberg-patterns-sync` on your site.
 - In WP Admin → Plugins, activate “Gutenberg Patterns Sync”.
 
 ### Via Composer (as MU‑plugin)
-This repository is set with Composer type `wordpress-muplugin`, so when installed via Composer it should be installed under `wp-content/mu-plugins/`.
+
+You can install by Composer, it is designed to be installed as a MU plugin under `wp-content/mu-plugins/` (developer‑oriented).
 
 #### From Packagist
 
-Do composer require maximeculea/gutenberg-patterns-sync.
+Do `composer require maximeculea/gutenberg-patterns-sync`
 
 #### From Github
 
-- Add into your composer json { "type": "vcs", "url": "https://github.com/MaximeCulea/gutenberg-patterns-sync" }
-- Include "maximeculea/gutenberg-patterns-sync": "dev-master" in your composer file as require
-- Before use, launch composer update
+- Add into your composer.json `{ "type": "vcs", "url": "https://github.com/MaximeCulea/gutenberg-patterns-sync" }`
+- Include `"maximeculea/gutenberg-patterns-sync": "dev-master"` in your composer file as require
+- Before use, launch `composer update`
 
 ## Commands
 
