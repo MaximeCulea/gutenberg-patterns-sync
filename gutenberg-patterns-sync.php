@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Gutenberg Patterns Sync (Export/Import)
-Version: 1.0.0
+Version: 1.1.0
 License: GPL3.0+
 Plugin URI: https://maximeculea.fr
 Description: Export and import block patterns (wp_block) as JSON via WP-CLI. Dev‑oriented to sync local patterns with other environments (staging, production).
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Plugin constants
-define( 'MC_PATTERNS_CLI_VERSION', '1.0.0' );
+define( 'MC_PATTERNS_CLI_VERSION', '1.1.0' );
 define( 'MC_PATTERNS_CLI_MIN_PHP_VERSION', '7.4' );
 
 // Plugin URL and PATH
