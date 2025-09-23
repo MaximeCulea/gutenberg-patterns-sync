@@ -49,6 +49,10 @@ class Patterns_Export extends
             $slug    = ! empty( $prefix ) ? sprintf( '%s/%s', $prefix, sanitize_title( $title ) ) : sanitize_title( $title );
             $content = get_post_field( 'post_content', $post );
 
+            // Replace current site URL with {site_url} placeholder for portability
+            $site_url = home_url();
+            $content = str_replace( $site_url, '{site_url}', (string) $content );
+
             $terms = get_the_terms( $post, $taxonomy );
             $cats  = [];
             if ( is_array( $terms ) ) {

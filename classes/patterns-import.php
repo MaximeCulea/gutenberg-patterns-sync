@@ -132,6 +132,10 @@ class Patterns_Import extends
                 \WP_CLI::warning( "Skip (needs slug+content): {$file}" );
                 continue;
             }
+            // Replace {site_url} placeholder with current site URL
+            $site_url = home_url();
+            $content = str_replace( '{site_url}', $site_url, (string) $content );
+            
             $seen[] = $slug;
 
             $existing = get_page_by_path( $slug, OBJECT, 'wp_block' );
